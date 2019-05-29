@@ -13,9 +13,41 @@
         <strong>We're sorry but the vehicle valuation calculator doesn't work properly without JavaScript
             enabled. Please enable it to continue.</strong>
     </noscript>
-    <main>
+    <main role="main">
         <h1>Vehicle Valuation Calculator</h1>
+        <form role="form">
+            <fieldset id="make-model-info">
+                <legend>Car Make/Model</legend>
+                <label for="make">Make:</label>
+                <input type="text" name="make" required />
+                <label for="model">Model:</label>
+                <input type="text" name="model" required />
+            </fieldset>
+            <fieldset id="valuation-info">
+                <legend>Car Valuation Criteria</legend>
+                <label for="marketvalue">Market Value:</label>
+                <input type="number" name="marketvalue" min="0" required />
+                <label for="age">Age (in months):</label>
+                <input type="number" name="age" min="0" required />
+                <label for="owners">Owners:</label>
+                <input type="number" name="owners" min="0" required />
+                <label for="mileage">Mileage (in miles):</label>
+                <input type="number" name="mileage" min="0" required />
+                <label for="collisions">Collisions:</label>
+                <input type="number" name="collisions" min="0" required />
+            </fieldset>
+            <div>
+                <submit id="car-value-submit-button">Get Cost Valuation!!</submit>
+                <input type="reset" value="Reset" />
+            </div>
+        </form>
+        <p id="api-output">Submit the car information to get your calculation here.</p>
     </main>
 </body>
 
 </html>
+
+<!--
+
+
+-->
